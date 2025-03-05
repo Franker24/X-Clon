@@ -1,0 +1,42 @@
+/* src/components/Feed.css */
+.feed {
+    flex: 1;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .feed__nav {
+    border-bottom: 1px solid #e6ecf0; /* Línea divisoria como en X */
+    margin-bottom: 15px;
+  }
+  
+  .feed__nav-list {
+    display: flex;
+    justify-content: space-around; /* Distribuye los elementos uniformemente */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .feed__nav-item {
+    font-size: 16px;
+    font-weight: bold;
+    color: #657786;
+    padding: 10px 15px;
+    cursor: pointer;
+    text-align: center;
+    flex: 1; /* Cada item ocupa el mismo espacio */
+  }
+  
+  .feed__nav-item:hover {
+    color: #1da1f2; /* Color azul al pasar el mouse */
+    border-bottom: 2px solid #1da1f2; /* Línea inferior como pestaña activa */
+  }
+  
+  .feed h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #14171a;
+  }

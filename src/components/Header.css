@@ -1,0 +1,67 @@
+/* src/components/Header.css */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #cee75e;
+  border-bottom: 1px solid #e6ecf0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header__logo h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1da1f2;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: center;
+  flex: 1; /* Ocupa el espacio disponible entre logo y perfil */
+}
+
+.header__nav-list {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  max-width: 600px; /* Limita el ancho para alinearse con Feed */
+}
+
+.header__nav-item {
+  font-size: 16px;
+  font-weight: bold;
+  color: #657786;
+  padding: 10px 15px;
+  cursor: pointer;
+  text-align: center;
+  flex: 1;
+}
+
+.header__nav-item:hover {
+  color: #1da1f2;
+  border-bottom: 2px solid #1da1f2;
+}
+
+.header__nav-item.active {
+  color: #1da1f2;
+  border-bottom: 2px solid #1da1f2; /* Línea para la pestaña activa */
+}
+
+.header__profile button {
+  padding: 8px 16px;
+  background-color: #1da1f2;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.header__profile button:hover {
+  background-color: #1a91da;
+}

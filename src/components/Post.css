@@ -1,0 +1,29 @@
+/* src/components/Post.css */
+.post {
+    padding: 15px;
+    border-bottom: 1px solid #e6ecf0; /* Línea divisoria como en X */
+    background-color: #fff;
+  }
+  
+  .post p {
+    margin: 0 0 10px 0;
+    font-size: 15px;
+    color: #14171a;
+  }
+  
+  .post__actions {
+    display: flex;
+    gap: 20px; /* Espacio entre botones */
+  }
+  
+  .post__actions button {
+    background: none;
+    border: none;
+    color: #657786; /* Color gris de los botones en X */
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .post__actions button:hover {
+    color: #1da1f2; /* Color azul al pasar el mouse */
+  }
