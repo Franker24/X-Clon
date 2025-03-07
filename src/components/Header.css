@@ -3,18 +3,27 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  background-color: #cee75e;
-  border-bottom: 1px solid #e6ecf0;
+  padding: 1px 20px;
+  background-color: transparent;
+  border-bottom: 1px solid transparent;
   position: sticky;
   top: 0;
   z-index: 100;
 }
 
-.header__logo h1 {
+
+
+/* .header__logo h1 {
   font-size: 24px;
   font-weight: bold;
-  color: #1da1f2;
+  color: #ffffff;
+  margin-left:270px;
+} */
+
+.header__logo img {
+  height: 40px; /* Adjust size as needed */
+  width: auto;
+  margin-left:270px;
 }
 
 .header__nav {
@@ -60,6 +69,7 @@
   border: none;
   border-radius: 20px;
   cursor: pointer;
+  margin-left: 270px;
 }
 
 .header__profile button:hover {

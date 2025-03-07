@@ -1,94 +1,110 @@
-/* src/components/RightSidebar.css */
 .right-sidebar {
-    width: 300px;
-    padding: 20px;
-    background-color: #c23131;
-    height: 100vh;
-    position: sticky;
-    top: 60px;
-    
-  }
-  
-  /* Estilos de la sección de Suscripción */
-  .right-sidebar__subscribe {
-    border: 1px solid #e6ecf0;
-    border-radius: 10px;
-    padding: 15px;
-    text-align: center;
-    margin-bottom: 20px; /* Espacio debajo para separar de What's Happening */
-  }
-  
-  .right-sidebar__subscribe h3 {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #14171a;
-  }
-  
-  .right-sidebar__subscribe p {
-    font-size: 14px;
-    color: #657786;
-    margin-bottom: 15px;
-  }
-  
-  .right-sidebar__button {
-    padding: 10px 20px;
-    background-color: #1da1f2;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  .right-sidebar__button:hover {
-    background-color: #1a91da;
-  }
-  
-  /* Estilos de la sección What's Happening */
-  .right-sidebar__whats-happening {
-    border: 1px solid #e6ecf0;
-    border-radius: 10px;
-    padding: 15px;
-  }
-  
-  .right-sidebar__whats-happening h3 {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 15px;
-    color: #14171a;
-  }
-  
-  .whats-happening__list {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .whats-happening__list li {
-    margin-bottom: 15px;
-    cursor: pointer;
-  }
-  
-  .whats-happening__title {
-    font-size: 15px;
-    font-weight: bold;
-    color: #14171a;
-    display: block;
-  }
-  
-  .whats-happening__list p {
-    font-size: 13px;
-    color: #657786;
-    margin: 5px 0 0 0;
-  }
-  
-  .whats-happening__list li:hover .whats-happening__title {
-    color: #1da1f2; /* Efecto hover similar a X */
-  }
-  .header__search input {
-    padding: 8px;
-    width: 300px;
-    border: 1px solid #e6ecf0;
-    border-radius: 20px;
-    outline: none;
-  }
+  width: 300px;
+  padding: 20px;
+  background-color: #000000;
+  height: 100vh;
+  position: sticky;
+  top: 60px;
+}
+
+.right-sidebar__subscribe {
+  border: 1px solid #e6ecf0;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.right-sidebar__subscribe h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ffffff;
+  align-items: left;
+}
+
+.right-sidebar__subscribe p {
+  font-size: 14px;
+  color: #ffffff;
+  margin-bottom: 15px;
+  align-items: left;
+}
+
+.right-sidebar__button {
+  padding: 10px 20px;
+  background-color: #1da1f2;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.right-sidebar__button:hover {
+  background-color: #1a91da;
+}
+
+.right-sidebar__whats-happening {
+  border: 1px solid #e6ecf0;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.right-sidebar__whats-happening h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.whats-happening__list {
+  list-style: none;
+  padding: 0;
+}
+
+.whats-happening__list li {
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.whats-happening__title {
+  font-size: 15px;
+  font-weight: bold;
+  color: #ffffff;
+  display: block;
+}
+
+.whats-happening__list p {
+  font-size: 13px;
+  color: #657786;
+  margin: 5px 0 0 0;
+}
+
+.whats-happening__list li:hover .whats-happening__title {
+  color: #1da1f2;
+}
+
+.header__search input {
+  padding: 8px;
+  width: 300px;
+  border: 1px solid #e6ecf0;
+  border-radius: 20px;
+  outline: none;
+  background-color: transparent;
+  color: #fff;
+}
+
+.right-a {
+  font-size: 14px;
+  color: #1383c9;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 15px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.right-a:hover {
+  background-color: #1f1f1f;
+  color: #ffffff;
+  text-decoration: none;
+}

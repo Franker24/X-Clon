@@ -9,14 +9,16 @@ function RightSidebar() {
         <input type="text" placeholder="Buscar en X" />
       </div>
       <br />
-      {/* Sección de Suscripción */}
       <div className="right-sidebar__subscribe">
         <h3>Suscríbete a X</h3>
         <p>Obtén acceso a funciones exclusivas.</p>
-        <button className="right-sidebar__button">Suscribirse</button>
+        <button
+  onClick={() => window.location.href = "https://x.com/i/premium_sign_up"}
+  className="right-sidebar__button"
+>
+  Suscribirse
+</button>
       </div>
-
-      {/* Sección de What's Happening */}
       <div className="right-sidebar__whats-happening">
         <h3>Whats Happening</h3>
         <ul className="whats-happening__list">
@@ -33,6 +35,7 @@ function RightSidebar() {
             <p>#AlgoPopular - 50K publicaciones</p>
           </li>
         </ul>
+        <a className='right-a' href='https://x.com/explore/tabs/for-you'>Show More</a>
       </div>
     </div>
   );

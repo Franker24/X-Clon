@@ -1,20 +1,48 @@
-/* src/App.css */
 .app {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  overflow: hidden;
 }
 
 .main-content {
   display: flex;
+  height: calc(100vh - 60px);
+  margin-top: -10px;
+  overflow: hidden;
 }
 
 .feed {
-  flex: 1;
+  flex: 0;  /* Keeps it from growing */
   padding: 20px;
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+  background: #f5f8fa;
+  margin: 0;  /* Remove any default margins */
+  min-width: 300px
 }
 
 .post {
   border-bottom: 1px solid #ccc;
   padding: 10px;
+}
+
+.sidebar {
+  flex: 0;  /* Keeps it from growing */
+  margin-left: 250px;  /* Remove any default margins */
+  padding: 0; /* Optional: adjust as needed */
+}
+
+.right-sidebar {
+  flex: 0;  /* Keeps it from growing */
+  margin-right: 250px;  /* Remove any default margins */
+  padding: 0; /* Optional: adjust as needed */
+  position: fixed;
+}
+
+@media (max-width: 1524px) {
+  .sidebar,
+  .right-sidebar {
+    display: none;
+  }
 }

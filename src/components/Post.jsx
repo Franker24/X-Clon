@@ -1,5 +1,5 @@
 import React from 'react';
-import './Post.css'; // Importamos su propio archivo CSS
+import './Post.css';
 
 function Post({ text, likes }) {
   return (

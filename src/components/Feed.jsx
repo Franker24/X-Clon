@@ -1,34 +1,60 @@
-// src/components/Feed.js
-import React from 'react';
+import React, { useState } from 'react';
 import Post from './Post';
 import './Feed.css';
 
-function Feed({ activeTab }) { // Recibe activeTab como prop
-  const posts = [
-    { id: 1, text: '¡Hola, mundo!', likes: 5 },
-    { id: 2, text: 'Clon de X en progreso', likes: 3 },
-  ];
+function Feed({ activeTab }) {
+  const [posts, setPosts] = useState({
+    "For You": [
+      { id: 1, text: '¡Hola, mundo!', likes: 5 },
+      { id: 2, text: 'Clon de X en progreso', likes: 3 },
+    ],
+    "Following": [
+      { id: 3, text: 'Post de alguien que sigues', likes: 8 },
+      { id: 4, text: 'Otro post interesante', likes: 4 },
+    ],
+    "Business + Economy": [
+      { id: 5, text: 'Las acciones están subiendo 📈', likes: 10 },
+      { id: 6, text: 'Nueva tendencia en startups 🚀', likes: 6 },
+    ],
+  });
+
+  const [newPost, setNewPost] = useState("");
+
+  const handlePostSubmit = () => {
+    if (newPost.trim() === "") return; // Evita publicar vacío
+
+    const newPostObj = {
+      id: Date.now(),
+      text: newPost,
+      likes: 0,
+    };
+
+    setPosts(prevPosts => ({
+      ...prevPosts,
+      [activeTab]: [newPostObj, ...prevPosts[activeTab]] // Agrega el nuevo post al inicio
+    }));
+
+    setNewPost("");
+  };
 
   return (
     <div className="feed">
-      {activeTab === 'For You' && (
+      {["For You", "Following"].includes(activeTab) && (
+        <div className="post-input">
+          <textarea
+            placeholder="What's Happening..."
+            value={newPost}
+            onChange={(e) => setNewPost(e.target.value)}
+          />
+          <button onClick={handlePostSubmit}>Post</button>
+        </div>
+      )}
+
+      {posts[activeTab] && (
         <section className="feed__section">
-          <h2>Inicio</h2>
-          {posts.map(post => (
+          {posts[activeTab].map(post => (
             <Post key={post.id} text={post.text} likes={post.likes} />
           ))}
-        </section>
-      )}
-      {activeTab === 'Following' && (
-        <section className="feed__section">
-          <h2>Follow</h2>
-          <p>Aquí aparecerán las publicaciones de las personas que sigues (próximamente).</p>
-        </section>
-      )}
-      {activeTab === 'Business + Economy' && (
-        <section className="feed__section">
-          <h2>Business</h2>
-          <p>Noticias y actualizaciones sobre negocios y economía (próximamente).</p>
         </section>
       )}
     </div>
